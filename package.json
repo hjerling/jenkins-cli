@@ -1,0 +1,48 @@
+{
+  "name": "jenkins-cli",
+  "version": "1.0.0",
+  "description": "A command line tool for interfacing with jenkins",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jslint ."
+  },
+  "bin": {
+    "jenkins": "lib/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hjerling/jenkins-cli.git"
+  },
+  "author": "ken.tucky@aj.ax",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hjerling/jenkins-cli/issues"
+  },
+  "homepage": "https://github.com/hjerling/jenkins-cli",
+  "private": true,
+  "jshintConfig": {
+    "quotmark": "single",
+    "unused": true,
+    "undef": true,
+    "node": true,
+    "globals": {
+      "describe": false,
+      "it": false,
+      "before": false,
+      "beforeEach": false,
+      "after": false,
+      "afterEach": false
+    }
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "chalk": "^1.0.0",
+    "commander": "^2.7.1",
+    "https-agent": "^1.0.0",
+    "jenkins-api": "^0.2.6",
+    "request": "^2.53.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.10"
+  }
+}
