@@ -4,7 +4,7 @@
   "description": "A command line tool for interfacing with jenkins",
   "main": "index.js",
   "scripts": {
-    "lint": "jslint ."
+    "lint": "jshint ."
   },
   "bin": {
     "jenkins": "lib/cli.js"
@@ -37,9 +37,13 @@
   "dependencies": {
     "async": "^0.9.0",
     "chalk": "^1.0.0",
+    "columnify": "^1.4.1",
     "commander": "^2.7.1",
     "https-agent": "^1.0.0",
     "jenkins-api": "^0.2.6",
+    "lodash": "^3.5.0",
+    "moment": "^2.9.0",
+    "progress": "^1.1.8",
     "request": "^2.53.0"
   },
   "devDependencies": {
