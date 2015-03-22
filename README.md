@@ -48,6 +48,18 @@ Get information about a specific build for a job:
 jenkins build-info -n 5 ibl
 ```
 
+Get build history for 10 latest builds for a job:
+
+```
+jenkins build-history ibl
+```
+
+Get build history for all saved builds for a job:
+
+```
+jenkins build-history ibl -a
+```
+
 Get output from the most recent build for a job:
 
 ```
