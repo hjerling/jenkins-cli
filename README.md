@@ -34,7 +34,7 @@ To view options for a particular command:
 ```
 jenkins build-info -h
 ```
-### Build
+### Build Information
 
 Get information about most recent build for a job:
 

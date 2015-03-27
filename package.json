@@ -40,13 +40,14 @@
     "columnify": "^1.4.1",
     "commander": "^2.7.1",
     "https-agent": "^1.0.0",
-    "jenkins-api": "^0.2.6",
     "lodash": "^3.5.0",
     "moment": "^2.9.0",
+    "node-jenkins": "git://github.com/hjerling/node-jenkins",
     "progress": "^1.1.8",
     "request": "^2.53.0"
   },
   "devDependencies": {
-    "jshint": "^2.5.10"
+    "jshint": "^2.5.10",
+    "mocha": "^2.2.1"
   }
 }
