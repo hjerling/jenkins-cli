@@ -32,20 +32,20 @@ jenkins -h
 To view options for a particular command:
 
 ```
-jenkins build-info -h
+jenkins build-history -h
 ```
 ### Build Information
 
 Get information about most recent build for a job:
 
 ```
-jenkins build-info ibl
+jenkins build-history ibl -s 1
 ```
 
 Get information about a specific build for a job:
 
 ```
-jenkins build-info -n 5 ibl
+jenkins build-history ibl -n 5
 ```
 
 Get build history for 10 latest builds for a job:
@@ -60,6 +60,18 @@ Get build history for all saved builds for a job:
 jenkins build-history ibl -a
 ```
 
+Search for a job:
+
+```
+jenkins search ibl
+```
+
+List all jobs:
+
+```
+jenkins search
+```
+
 Get output from the most recent build for a job:
 
 ```
@@ -69,13 +81,39 @@ jenkins build-output ibl
 Get output from a specific build for a job:
 
 ```
-jenkins build-output -n 5 ibl
+jenkins build-output ibl -n 5
 ```
 
 Monitor progress of a ongoing build for a job:
 
 ```
 jenkins build-progress ibl
+```
+
+## Development
+
+* All interactions with the Jenkins API use the [`node-jenkins`](https://github.com/hjerling/node-jenkins) library.
+* The `node-jenkins` library should closely match the Jenkins API.
+* If your command needs to make multiple Jenkins requests, make multiple calls into the `node-jenkins` library. Don't add methods to the API library for aggregating calls.
+* To use a local version of the `node-jenkins` library during development, clone the library and link it from within the `jenkins-cli` project:
+
+```
+git clone git@github.com:hjerling/jenkins-cli.git
+git clone git@github.com:hjerling/node-jenkins.git
+cd jenkins-cli
+npm link ../node-jenkins
+```
+* To use your local version of `jenkins-cli` in development you can [npm link](https://docs.npmjs.com/cli/link) it globally so that the `jenkins` command will point to your version:
+
+```
+cd jenkins-cli
+npm link .
+```
+
+If you're having any problems with `npm link`, make sure you've upgraded to a shiny new npm first:
+
+```
+npm install -g npm
 ```
 
 ## Contributing
@@ -85,3 +123,7 @@ jenkins build-progress ibl
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Create new [Pull Request](https://github.com/hjerling/cosmos-cli/pulls).
+
+## Thanks
+
+Thanks to [Robin Murphy](https://github.com/robinjmurphy) for basic structure of app.
