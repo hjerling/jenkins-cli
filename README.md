@@ -34,6 +34,7 @@ To view options for a particular command:
 ```
 jenkins build-history -h
 ```
+
 ### Build Information
 
 Get information about most recent build for a job:
@@ -60,18 +61,6 @@ Get build history for all saved builds for a job:
 jenkins build-history ibl -a
 ```
 
-Search for a job:
-
-```
-jenkins search ibl
-```
-
-List all jobs:
-
-```
-jenkins search
-```
-
 Get output from the most recent build for a job:
 
 ```
@@ -88,6 +77,29 @@ Monitor progress of a ongoing build for a job:
 
 ```
 jenkins build-progress ibl
+```
+
+### Job Information
+
+
+Search for a job:
+
+```
+jenkins search ibl
+```
+
+List all jobs:
+
+```
+jenkins search
+```
+
+### Job Interactions
+
+Trigger a build for a job:
+
+```
+jenkins build ibl
 ```
 
 ## Development
