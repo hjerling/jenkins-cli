@@ -1,6 +1,6 @@
 # jenkins-cli
 
-> Command line interface for Jenkins (BBC)
+> Command line interface for Jenkins
 
 ## Features
 
