@@ -13,11 +13,13 @@
 npm install -g hjerling/jenkins-cli
 ```
 
-You then need to export the location of your BBC developer certificate:
+You then set the Jenkins host URL with this:
 
 ```
-export COSMOS_CERT=/path/to/my.pem
+jenkins config -H https://builds.apache.org/
 ```
+
+For certificate configurations see the [configuration section](https://github.com/hjerling/jenkins-cli#configuration).
 
 ## Usage
 
@@ -100,6 +102,29 @@ Trigger a build for a job:
 
 ```
 jenkins build ibl
+```
+
+### Configuration
+
+Configuration is stored in the file `~/.jenkins`.
+The object in the file is passed on to the [`request.defaults`](https://github.com/request/request) function so it is possible to to utilise that if need be.
+
+Set the Jenkins host URL:
+
+```
+jenkins config --host http://jenkins.url
+```
+
+Set the Jenkins host communication certificate:
+
+```
+jenkins config --cert /path/to/certtificate
+```
+
+Set the certificate password:
+
+```
+jenkins config --certPassword c3r71f1c473-p455w0rd
 ```
 
 ## Development
