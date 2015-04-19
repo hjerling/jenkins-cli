@@ -42,7 +42,7 @@
     "https-agent": "^1.0.0",
     "lodash": "^3.5.0",
     "moment": "^2.9.0",
-    "node-jenkins": "git://github.com/hjerling/node-jenkins",
+    "node-jenkins": "git://github.com/hjerling/node-jenkins#v1.0.1",
     "progress": "^1.1.8",
     "request": "^2.53.0"
   },

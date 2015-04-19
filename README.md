@@ -90,10 +90,30 @@ Search for a job:
 jenkins search ibl
 ```
 
+Search among jobs that are currently building:
+
+```
+jenkins search ibl -b
+```
+
 List all jobs:
 
 ```
 jenkins search
+```
+
+List all jobs currently building:
+
+```
+jenkins search -b
+```
+
+### Build Queue
+
+Show the build queue:
+
+```
+jenkins build-queue
 ```
 
 ### Job Interactions
@@ -104,6 +124,17 @@ Trigger a build for a job:
 jenkins build ibl
 ```
 
+Request for the latest build of a job to stopped:
+
+```
+jenkins stop-build ibl
+```
+
+Request for a specific build of a job to stopped:
+
+```
+jenkins stop-build ibl 5
+```
 ### Configuration
 
 Configuration is stored in the file `~/.jenkins`.
@@ -125,6 +156,14 @@ Set the certificate password:
 
 ```
 jenkins config --certPassword c3r71f1c473-p455w0rd
+```
+
+### Jenkins Server
+
+Show information about the Jenkins Build Server:
+
+```
+jenkins info
 ```
 
 ## Development
