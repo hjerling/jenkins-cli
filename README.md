@@ -158,6 +158,11 @@ Set the certificate password:
 jenkins config --certPassword c3r71f1c473-p455w0rd
 ```
 
+Disable strict SSL checking (useful for self signed certificates):
+
+```
+jenkins config --strictSSL false
+```
 ### Jenkins Server
 
 Show information about the Jenkins Build Server:
